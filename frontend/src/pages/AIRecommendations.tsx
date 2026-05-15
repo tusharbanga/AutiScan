@@ -131,7 +131,7 @@ export default function AIRecommendations() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-purple-100 p-6 md:p-10">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-purple-100 p-3 sm:p-4 md:p-6 lg:p-10 overflow-hidden">
 
       <div className="max-w-7xl mx-auto">
 
@@ -139,11 +139,11 @@ export default function AIRecommendations() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-10">
 
           <div>
-            <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-700 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-700 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-4 leading-tight break-words">
               🤖 AI Therapy Recommendations
             </h1>
 
-            <p className="text-xl text-gray-600 font-medium max-w-3xl leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-medium max-w-3xl leading-relaxed">
               Personalized AI-powered therapy exercises, behavioral guidance,
               memory games, speech activities and attention improvement tasks.
             </p>
@@ -151,7 +151,7 @@ export default function AIRecommendations() {
 
           <button
             onClick={() => navigate("/")}
-            className="px-6 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold shadow-xl hover:scale-105 transition-all duration-300"
+            className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold shadow-xl hover:scale-105 transition-all duration-300 text-sm sm:text-base"
           >
             ← Back to Dashboard
           </button>
@@ -159,7 +159,7 @@ export default function AIRecommendations() {
         </div>
 
         {/* Hero Banner */}
-        <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-purple-600 via-pink-500 to-cyan-500 p-10 shadow-2xl mb-12">
+        <div className="relative overflow-hidden rounded-[25px] md:rounded-[40px] bg-gradient-to-br from-purple-600 via-pink-500 to-cyan-500 p-4 sm:p-6 md:p-10 shadow-2xl mb-12">
 
           <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
@@ -168,18 +168,18 @@ export default function AIRecommendations() {
 
             <div className="max-w-3xl text-white">
 
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/20">
+              <div className="inline-flex flex-wrap items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/20 text-sm sm:text-base">
                 <span className="text-2xl">✨</span>
                 <span className="font-bold tracking-wide">
                   Gemini AI Powered Therapy
                 </span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-6 break-words">
                 Smart Personalized Therapy Guidance for Kids
               </h2>
 
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-medium">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-medium">
                 Adaptive AI recommendations for focus improvement,
                 speech correction, emotional intelligence,
                 behavioral therapy and autism support.
@@ -187,44 +187,44 @@ export default function AIRecommendations() {
 
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full xl:w-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 w-full xl:w-auto">
 
-              <div className="rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-5 text-white shadow-xl text-center">
-                <div className="text-5xl mb-3">🧠</div>
+              <div className="rounded-[22px] sm:rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-4 sm:p-5 text-white shadow-xl text-center">
+                <div className="text-4xl sm:text-5xl mb-3">🧠</div>
                 <div className="text-lg font-semibold opacity-90">
                   AI Exercises
                 </div>
-                <div className="text-4xl font-extrabold mt-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold mt-2 break-words">
                   120+
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-5 text-white shadow-xl text-center">
-                <div className="text-5xl mb-3">🏆</div>
+              <div className="rounded-[22px] sm:rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-4 sm:p-5 text-white shadow-xl text-center">
+                <div className="text-4xl sm:text-5xl mb-3">🏆</div>
                 <div className="text-lg font-semibold opacity-90">
                   Reward System
                 </div>
-                <div className="text-4xl font-extrabold mt-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold mt-2 break-words">
                   Active
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-5 text-white shadow-xl text-center animate-pulse">
-                <div className="text-5xl mb-3">📈</div>
+              <div className="rounded-[22px] sm:rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-4 sm:p-5 text-white shadow-xl text-center animate-pulse">
+                <div className="text-4xl sm:text-5xl mb-3">📈</div>
                 <div className="text-lg font-semibold opacity-90">
                   Live Therapy Score
                 </div>
-                <div className="text-4xl font-extrabold mt-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold mt-2 break-words">
                   {therapyScore}%
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-5 text-white shadow-xl text-center animate-pulse">
-                <div className="text-5xl mb-3">🎤</div>
+              <div className="rounded-[22px] sm:rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-4 sm:p-5 text-white shadow-xl text-center animate-pulse">
+                <div className="text-4xl sm:text-5xl mb-3">🎤</div>
                 <div className="text-lg font-semibold opacity-90">
                   Speech Accuracy
                 </div>
-                <div className="text-4xl font-extrabold mt-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold mt-2 break-words">
                   {speechAccuracy}%
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function AIRecommendations() {
           </div>
         </div>
 
-        <div className="rounded-[40px] bg-white shadow-2xl border border-white p-8 mb-10 overflow-hidden relative">
+        <div className="rounded-[25px] md:rounded-[40px] bg-white shadow-2xl border border-white p-4 sm:p-6 md:p-8 mb-10 overflow-hidden relative">
 
           <div className="absolute top-0 right-0 w-72 h-72 bg-cyan-100 rounded-full blur-3xl opacity-40" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-pink-100 rounded-full blur-3xl opacity-40" />
@@ -243,23 +243,23 @@ export default function AIRecommendations() {
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
 
               <div>
-                <h2 className="text-4xl font-extrabold text-purple-700 mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-purple-700 mb-4 break-words">
                   ⚡ Live AI Therapy Recommendations
                 </h2>
 
-                <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-3xl">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 font-medium leading-relaxed max-w-3xl">
                   Real-time adaptive therapy guidance based on attention,
                   speech interaction, behavioral analytics and cognitive engagement.
                 </p>
               </div>
 
-              <div className="rounded-[30px] bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-6 shadow-2xl min-w-[320px] animate-pulse">
+              <div className="rounded-[22px] sm:rounded-[30px] bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 sm:p-6 shadow-2xl w-full lg:min-w-[320px] animate-pulse">
 
                 <div className="text-lg font-bold opacity-90 mb-2">
                   🧠 Current AI Recommendation
                 </div>
 
-                <div className="text-3xl font-extrabold leading-snug">
+                <div className="text-lg sm:text-2xl md:text-3xl font-extrabold leading-snug break-words">
                   {liveRecommendation}
                 </div>
 
@@ -267,9 +267,9 @@ export default function AIRecommendations() {
 
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 mt-10">
 
-              <div className="rounded-[30px] bg-gradient-to-br from-pink-50 to-purple-50 border border-pink-100 p-6 shadow-xl">
+              <div className="rounded-[22px] md:rounded-[30px] bg-gradient-to-br from-pink-50 to-purple-50 border border-pink-100 p-4 sm:p-6 shadow-xl">
                 <div className="text-5xl mb-4">📈</div>
                 <div className="text-2xl font-extrabold text-purple-700 mb-3">
                   Therapy Progress
@@ -287,7 +287,7 @@ export default function AIRecommendations() {
                 </div>
               </div>
 
-              <div className="rounded-[30px] bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 p-6 shadow-xl">
+              <div className="rounded-[22px] md:rounded-[30px] bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 p-4 sm:p-6 shadow-xl">
                 <div className="text-5xl mb-4">🎯</div>
                 <div className="text-2xl font-extrabold text-cyan-700 mb-3">
                   Attention Stability
@@ -305,7 +305,7 @@ export default function AIRecommendations() {
                 </div>
               </div>
 
-              <div className="rounded-[30px] bg-gradient-to-br from-orange-50 to-pink-50 border border-orange-100 p-6 shadow-xl">
+              <div className="rounded-[22px] md:rounded-[30px] bg-gradient-to-br from-orange-50 to-pink-50 border border-orange-100 p-4 sm:p-6 shadow-xl">
                 <div className="text-5xl mb-4">🗣</div>
                 <div className="text-2xl font-extrabold text-orange-700 mb-3">
                   Speech Development
@@ -329,32 +329,32 @@ export default function AIRecommendations() {
         </div>
 
         {/* Recommendation Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
 
           {recommendations.map((item, index) => (
             <div
               key={index}
-              className="rounded-[35px] bg-white shadow-2xl overflow-hidden border border-white hover:scale-[1.02] transition-all duration-300"
+              className="rounded-[22px] md:rounded-[35px] bg-white shadow-2xl overflow-hidden border border-white hover:scale-[1.02] transition-all duration-300"
             >
 
-              <div className={`bg-gradient-to-r ${item.color} p-8 text-white`}>
+              <div className={`bg-gradient-to-r ${item.color} p-4 sm:p-6 md:p-8 text-white`}>
 
-                <div className="text-6xl mb-5">
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-5">
                   {item.emoji}
                 </div>
 
-                <h2 className="text-3xl font-extrabold mb-3">
+                <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 break-words">
                   {item.title}
                 </h2>
 
-                <p className="text-white/90 text-lg leading-relaxed font-medium">
+                <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed font-medium">
                   {item.description}
                 </p>
               </div>
 
-              <div className="p-8">
+              <div className="p-4 sm:p-6 md:p-8">
 
-                <h3 className="text-2xl font-bold text-gray-800 mb-5">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-5">
                   Recommended Activities
                 </h3>
 
@@ -363,7 +363,7 @@ export default function AIRecommendations() {
                   {item.activities.map((activity, i) => (
                     <div
                       key={i}
-                      className="rounded-2xl bg-gradient-to-r from-pink-50 to-purple-50 border border-purple-100 p-4 font-semibold text-gray-700 shadow-sm"
+                      className="rounded-2xl bg-gradient-to-r from-pink-50 to-purple-50 border border-purple-100 p-3 sm:p-4 font-semibold text-sm sm:text-base text-gray-700 shadow-sm break-words"
                     >
                       ✨ {activity}
                     </div>
@@ -393,7 +393,7 @@ export default function AIRecommendations() {
                       navigate("/attention-monitor");
                     }
                   }}
-                  className={`mt-8 w-full rounded-2xl bg-gradient-to-r ${item.color} text-white py-4 font-bold text-lg shadow-xl hover:scale-[1.02] transition-all duration-300`}
+                  className={`mt-8 w-full rounded-2xl bg-gradient-to-r ${item.color} text-white py-3 sm:py-4 font-bold text-sm sm:text-base md:text-lg shadow-xl hover:scale-[1.02] transition-all duration-300`}
                 >
                   Start Therapy Activities 🚀
                 </button>

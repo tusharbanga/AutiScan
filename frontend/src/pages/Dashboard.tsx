@@ -100,23 +100,23 @@ const Dashboard = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-4 py-4 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <Brain className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold">AutiScan</h1>
+            <h1 className="text-xl sm:text-2xl font-bold break-words">AutiScan</h1>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
 
   <button
     onClick={() => navigate("/ai-companion")}
-    className="group relative flex items-center gap-4 rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-400 text-white px-6 py-3 shadow-[0_15px_40px_rgba(236,72,153,0.35)] hover:scale-105 transition-all duration-300 border border-white/20 overflow-hidden"
+    className="group relative flex items-center gap-2 sm:gap-4 rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-400 text-white px-3 sm:px-6 py-2 sm:py-3 shadow-[0_15px_40px_rgba(236,72,153,0.35)] hover:scale-105 transition-all duration-300 border border-white/20 overflow-hidden max-w-full"
   >
 
     <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-400 blur-2xl opacity-40 animate-pulse" />
 
-    <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-md text-2xl animate-bounce shadow-lg">
+    <div className="relative z-10 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-md text-xl sm:text-2xl animate-bounce shadow-lg">
       🤖
     </div>
 
@@ -161,10 +161,10 @@ const Dashboard = () => {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-3 sm:px-4 py-6 sm:py-8 overflow-hidden">
         {/* Welcome Section */}
         <div className="mb-8 animate-fade-in">
-          <h2 className="text-3xl font-bold mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 break-words">
             Hi, {userEmail.split('@')[0]} 👋
           </h2>
           <p className="text-muted-foreground">
@@ -175,7 +175,7 @@ const Dashboard = () => {
         {/* Speech Pronunciation Banner */}
         <div
           onClick={() => navigate("/speech")}
-          className="mb-10 relative overflow-hidden rounded-[40px] bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 p-8 md:p-10 shadow-2xl cursor-pointer hover:scale-[1.01] hover:shadow-[0_20px_60px_rgba(168,85,247,0.4)] transition-all duration-300"
+          className="mb-10 relative overflow-hidden rounded-[24px] md:rounded-[40px] bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl cursor-pointer hover:scale-[1.01] hover:shadow-[0_20px_60px_rgba(168,85,247,0.4)] transition-all duration-300"
         >
 
           <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
@@ -185,30 +185,30 @@ const Dashboard = () => {
 
             <div className="max-w-3xl text-white">
 
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/20">
+              <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 rounded-full bg-white/20 backdrop-blur-md mb-6 border border-white/20 max-w-full">
                 <span className="text-2xl">🎤</span>
                 <span className="font-bold tracking-wide">
                   Real-Time Speech AI
                 </span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-6 break-words">
                 Speech Pronunciation Checker
               </h2>
 
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-medium">
+              <p className="text-sm sm:text-base md:text-xl text-white/90 leading-relaxed font-medium break-words">
                 Live microphone listening, pronunciation correction,
                 speech recognition, voice feedback and real-time word analysis.
               </p>
 
             </div>
 
-            <div className="rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-6 text-white shadow-xl min-w-[240px] text-center">
-              <div className="text-6xl mb-4">🗣</div>
+            <div className="rounded-[22px] sm:rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-4 sm:p-6 text-white shadow-xl w-full sm:min-w-[240px] text-center overflow-hidden">
+              <div className="text-4xl sm:text-6xl mb-4">🗣</div>
               <div className="text-xl font-bold opacity-90">
                 AI Voice Recognition
               </div>
-              <div className="text-4xl font-extrabold mt-3">
+              <div className="text-2xl sm:text-4xl font-extrabold mt-3 break-words">
                 LIVE
               </div>
             </div>
@@ -217,20 +217,20 @@ const Dashboard = () => {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="border-border/50 bg-card/90 backdrop-blur-sm shadow-soft hover:shadow-glow hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 cursor-pointer group animate-scale-in rounded-[30px] overflow-hidden"
+              className="border-border/50 bg-card/90 backdrop-blur-sm shadow-soft hover:shadow-glow hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 cursor-pointer group animate-scale-in rounded-[22px] sm:rounded-[30px] overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => navigate(feature.path)}
             >
               <CardHeader>
-                <div className={`w-16 h-16 rounded-3xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-xl`}>
+                <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl sm:rounded-3xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-xl`}>
                   <feature.icon className="h-7 w-7 text-white" />
                 </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
-                <CardDescription className="text-base">
+                <CardTitle className="text-lg sm:text-xl break-words">{feature.title}</CardTitle>
+                <CardDescription className="text-sm sm:text-base break-words leading-relaxed">
                   {feature.description}
                 </CardDescription>
               </CardHeader>
@@ -240,7 +240,7 @@ const Dashboard = () => {
 
         {/* Featured AI Therapy Banner */}
         <div
-          className="mt-16 relative overflow-hidden rounded-[40px] bg-gradient-to-br from-purple-600 via-pink-500 to-cyan-500 p-6 md:p-10 shadow-2xl cursor-pointer transition-all duration-500 animate-fade-in"
+          className="mt-16 relative overflow-hidden rounded-[24px] md:rounded-[40px] bg-gradient-to-br from-purple-600 via-pink-500 to-cyan-500 p-4 sm:p-6 md:p-10 shadow-2xl cursor-pointer transition-all duration-500 animate-fade-in"
           onClick={() => navigate("/attention")}
         >
 
@@ -258,55 +258,55 @@ const Dashboard = () => {
                 </span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl xl:text-6xl font-extrabold leading-tight mb-6 text-white max-w-4xl">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl xl:text-6xl font-extrabold leading-tight mb-6 text-white max-w-4xl break-words">
                 Smart Behavioral AI & Therapy Dashboard
               </h2>
 
-              <p className="text-base md:text-xl text-white/90 leading-relaxed mb-8 font-medium max-w-4xl">
+              <p className="text-sm sm:text-base md:text-xl text-white/90 leading-relaxed mb-8 font-medium max-w-4xl break-words">
                 Live eye tracking, AI therapy guidance, emotion analysis,
                 personalized activities, progress tracking, rewards,
                 achievements and behavioral intelligence for kids.
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full">
 
-                <div className="px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/20 font-bold text-white">
+                <div className="px-4 sm:px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/20 font-bold text-white text-sm sm:text-base break-words text-center">
                   👁 Eye Tracking
                 </div>
 
-                <div className="px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/20 font-bold text-white">
+                <div className="px-4 sm:px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/20 font-bold text-white text-sm sm:text-base break-words text-center">
                   🤖 Gemini AI
                 </div>
 
-                <div className="px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/20 font-bold text-white">
+                <div className="px-4 sm:px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/20 font-bold text-white text-sm sm:text-base break-words text-center">
                   🏆 Rewards System
                 </div>
 
-                <div className="px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/20 font-bold text-white">
+                <div className="px-4 sm:px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/20 font-bold text-white text-sm sm:text-base break-words text-center">
                   📈 Progress Analytics
                 </div>
 
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-5 w-full xl:w-auto xl:min-w-[320px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4 sm:gap-5 w-full xl:w-auto xl:min-w-[320px]">
 
-              <div className="rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-5 text-white shadow-xl">
-                <div className="text-5xl mb-3">🎯</div>
-                <div className="text-lg font-semibold opacity-90">
+              <div className="rounded-[22px] sm:rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-4 sm:p-5 text-white shadow-xl overflow-hidden">
+                <div className="text-4xl sm:text-5xl mb-3">🎯</div>
+                <div className="text-sm sm:text-lg font-semibold opacity-90 break-words">
                   Live Attention Score
                 </div>
-                <div className="text-5xl font-extrabold mt-2">
+                <div className="text-3xl sm:text-5xl font-extrabold mt-2 break-words">
                   94%
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-5 text-white shadow-xl">
-                <div className="text-5xl mb-3">🏆</div>
-                <div className="text-lg font-semibold opacity-90">
+              <div className="rounded-[22px] sm:rounded-3xl bg-white/15 backdrop-blur-xl border border-white/20 p-4 sm:p-5 text-white shadow-xl overflow-hidden">
+                <div className="text-4xl sm:text-5xl mb-3">🏆</div>
+                <div className="text-sm sm:text-lg font-semibold opacity-90 break-words">
                   AI Therapy Activities
                 </div>
-                <div className="text-3xl font-extrabold mt-2">
+                <div className="text-2xl sm:text-3xl font-extrabold mt-2 break-words">
                   24 Tasks
                 </div>
               </div>
@@ -316,11 +316,11 @@ const Dashboard = () => {
         </div>
 
         {/* Quick Actions */}
-        <div className="mt-8 flex flex-wrap gap-4 justify-center">
+        <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
           <Button
             variant="outline"
             onClick={() => navigate("/about")}
-            className="rounded-2xl px-6 py-5 text-base font-semibold hover:bg-primary hover:text-white transition-all duration-300"
+            className="rounded-2xl w-full sm:w-auto px-5 sm:px-6 py-4 sm:py-5 text-sm sm:text-base font-semibold hover:bg-primary hover:text-white transition-all duration-300"
           >
             About Autism
           </Button>

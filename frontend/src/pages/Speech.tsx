@@ -431,7 +431,7 @@ export default function Speech() {
   }, [handleResult]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-300 via-sky-100 to-cyan-300 text-white p-6 md:p-10 overflow-hidden relative">
+    <div className="min-h-screen bg-gradient-to-br from-pink-300 via-sky-100 to-cyan-300 text-white p-3 sm:p-5 md:p-10 overflow-hidden relative">
       {/* Ambient blobs */}
       <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-pink-300/40 blur-3xl animate-pulse pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-cyan-300/40 blur-3xl animate-bounce pointer-events-none" />
@@ -439,12 +439,12 @@ export default function Speech() {
       <div className="absolute top-24 right-24 text-[120px] opacity-10 animate-spin pointer-events-none select-none">⭐</div>
       <div className="absolute bottom-24 left-24 text-[100px] opacity-10 animate-bounce pointer-events-none select-none">☁️</div>
 
-      <div className="max-w-5xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
 
-        <div className="flex justify-end mb-6">
+        <div className="flex justify-center sm:justify-end mb-6">
           <button
             onClick={() => navigate("/")}
-            className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-extrabold text-lg shadow-2xl hover:scale-105 transition-all duration-300 border-[3px] border-white"
+            className="w-full sm:w-auto px-5 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-extrabold text-base sm:text-lg shadow-2xl hover:scale-105 transition-all duration-300 border-[3px] border-white"
           >
             🏠 Home Page
           </button>
@@ -457,13 +457,13 @@ export default function Speech() {
         )}
 
         {/* Header */}
-        <div className="rounded-[50px] bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500 p-10 shadow-[0_25px_100px_rgba(168,85,247,0.5)] mb-10 border-[8px] border-white/50 relative overflow-hidden">
+        <div className="rounded-[28px] sm:rounded-[40px] md:rounded-[50px] bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500 p-5 sm:p-7 md:p-10 shadow-[0_25px_100px_rgba(168,85,247,0.5)] mb-8 md:mb-10 border-[4px] sm:border-[6px] md:border-[8px] border-white/50 relative overflow-hidden">
           <div className="absolute -top-8 -right-6 text-[110px] opacity-20 animate-bounce select-none">🧸</div>
           <div className="absolute bottom-0 left-0 text-[90px] opacity-20 animate-pulse select-none">🌈</div>
-          <h1 className="text-5xl md:text-6xl font-black mb-6 drop-shadow-2xl">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 md:mb-6 drop-shadow-2xl leading-tight">
             🌈 Smart Kids Speech World
           </h1>
-          <p className="text-xl md:text-2xl text-white/95 leading-relaxed font-semibold max-w-3xl">
+          <p className="text-base sm:text-lg md:text-2xl text-white/95 leading-relaxed font-semibold max-w-3xl">
             Fun AI-powered speech learning for kids with smart pronunciation correction, colorful speaking activities, voice rewards and adaptive practice games.
           </p>
 
@@ -476,7 +476,7 @@ export default function Speech() {
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { label: "🎯 Pronunciation Accuracy", value: `${accuracy}%` },
               { label: "📚 Difficulty Level", value: "Adaptive AI" },
@@ -492,11 +492,11 @@ export default function Speech() {
         </div>
 
         {/* TARGET WORD — big and prominent */}
-        <div className="mb-8 rounded-[45px] bg-gradient-to-r from-yellow-300 to-orange-400 border-[8px] border-white/60 p-8 shadow-2xl text-center">
+        <div className="mb-8 rounded-[25px] sm:rounded-[35px] md:rounded-[45px] bg-gradient-to-r from-yellow-300 to-orange-400 border-[4px] sm:border-[6px] md:border-[8px] border-white/60 p-4 sm:p-6 md:p-8 shadow-2xl text-center">
           <div className="text-2xl font-bold text-orange-900 mb-3">
             🎯 Say This Word:
           </div>
-          <div className="text-7xl md:text-8xl font-black text-white drop-shadow-2xl tracking-wide uppercase">
+          <div className="text-4xl sm:text-6xl md:text-8xl font-black text-white drop-shadow-2xl tracking-wide uppercase break-words">
             {practiceTarget || currentWord}
           </div>
           {!practiceTarget && (
@@ -510,11 +510,11 @@ export default function Speech() {
         </div>
 
         {/* Main grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 md:gap-8">
 
           {/* Left panel – Listening */}
-          <div className="rounded-[45px] bg-white/95 backdrop-blur-xl border-[6px] border-white/60 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.18)] text-gray-800 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500">
-            <div className="text-6xl mb-5 animate-bounce">🎤</div>
+          <div className="rounded-[25px] sm:rounded-[35px] md:rounded-[45px] bg-white/95 backdrop-blur-xl border-[6px] border-white/60 p-4 sm:p-6 md:p-8 shadow-[0_20px_70px_rgba(0,0,0,0.18)] text-gray-800 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500">
+            <div className="text-4xl sm:text-5xl md:text-6xl mb-5 animate-bounce">🎤</div>
             <h2 className="text-3xl font-bold mb-4">Live Listening</h2>
 
             <button
@@ -622,8 +622,8 @@ export default function Speech() {
           </div>
 
           {/* Right panel – Feedback */}
-          <div className="rounded-[45px] bg-white/95 backdrop-blur-xl border-[6px] border-white/60 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.18)] text-gray-800 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500">
-            <div className="text-6xl mb-5 animate-bounce">
+          <div className="rounded-[25px] sm:rounded-[35px] md:rounded-[45px] bg-white/95 backdrop-blur-xl border-[6px] border-white/60 p-4 sm:p-6 md:p-8 shadow-[0_20px_70px_rgba(0,0,0,0.18)] text-gray-800 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500">
+            <div className="text-4xl sm:text-5xl md:text-6xl mb-5 animate-bounce">
               {correct === true ? "🎉" : correct === false ? "🧠" : "💬"}
             </div>
             <h2 className="text-3xl font-bold mb-4">AI Feedback</h2>
@@ -693,14 +693,14 @@ export default function Speech() {
 
             <div className="mt-8 rounded-[30px] bg-gradient-to-r from-cyan-100 to-purple-100 border-4 border-cyan-200 p-6 shadow-xl">
               <div className="text-2xl font-extrabold mb-5 text-cyan-700">🤖 Smart AI Therapy System</div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
                   { icon: "🎤", label: "Speech Detection", color: "cyan" },
                   { icon: "🧠", label: "Adaptive Practice", color: "pink" },
                   { icon: "🏆", label: "Confidence Building", color: "purple" },
                 ].map(({ icon, label, color }) => (
                   <div key={label} className={`rounded-2xl bg-white p-5 border-2 border-${color}-200 shadow-md text-center`}>
-                    <div className="text-4xl mb-3">{icon}</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl mb-3">{icon}</div>
                     <div className={`font-bold text-${color}-700`}>{label}</div>
                   </div>
                 ))}
@@ -709,10 +709,10 @@ export default function Speech() {
           </div>
         </div>
 
-        <div className="mt-10 rounded-[40px] bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 p-8 border-[6px] border-white/40 shadow-2xl text-center">
+        <div className="mt-10 rounded-[25px] sm:rounded-[35px] md:rounded-[40px] bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 p-5 sm:p-6 md:p-8 border-[4px] sm:border-[5px] md:border-[6px] border-white/40 shadow-2xl text-center">
           <div className="text-4xl mb-4 animate-bounce">🧠🎮🌈</div>
-          <h2 className="text-3xl md:text-4xl font-black mb-4">Smart Adaptive AI Learning</h2>
-          <p className="text-xl font-semibold text-white/95 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 leading-tight">Smart Adaptive AI Learning</h2>
+          <p className="text-base sm:text-lg md:text-xl font-semibold text-white/95 max-w-3xl mx-auto leading-relaxed">
             The AI gives you a specific word to say, checks your pronunciation strictly, and only marks it correct when you say it clearly and accurately.
           </p>
         </div>

@@ -453,19 +453,19 @@ export default function AICompanion() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#fde7ff,#dbeafe,#fef9c3)] p-6">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#fde7ff,#dbeafe,#fef9c3)] p-3 sm:p-4 md:p-6">
 
       <div className="max-w-7xl mx-auto">
 
-        <div className="flex justify-between items-center mb-10">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-5 mb-10">
 
           <div>
 
-            <h1 className="text-6xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent leading-tight">
               🤖 AI Friend Companion
             </h1>
 
-            <p className="text-xl font-bold text-gray-700 mt-3">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-700 mt-3">
               Interactive voice companion for speech practice.
             </p>
 
@@ -475,14 +475,14 @@ export default function AICompanion() {
             onClick={() =>
               navigate("/dashboard")
             }
-            className="px-8 py-4 rounded-[30px] bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 text-white font-black"
+            className="w-full sm:w-auto px-5 sm:px-8 py-3 sm:py-4 rounded-[30px] bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 text-white font-black text-sm sm:text-base"
           >
             ← Back
           </button>
 
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-8">
 
           <div>
 
@@ -494,7 +494,7 @@ export default function AICompanion() {
 
           </div>
 
-          <div className="xl:col-span-2 rounded-[40px] bg-white p-8 shadow-[0_25px_70px_rgba(0,0,0,0.12)]">
+          <div className="xl:col-span-2 rounded-[25px] md:rounded-[40px] bg-white p-4 sm:p-6 md:p-8 shadow-[0_25px_70px_rgba(0,0,0,0.12)] overflow-hidden">
 
             <div className="mb-8">
 
@@ -502,9 +502,9 @@ export default function AICompanion() {
 
             </div>
 
-            <div className="rounded-[35px] bg-white border-[4px] border-cyan-100 p-8">
+            <div className="rounded-[25px] md:rounded-[35px] bg-white border-[3px] md:border-[4px] border-cyan-100 p-4 sm:p-6 md:p-8">
 
-              <div className="flex gap-5 flex-wrap mb-6">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mb-6">
 
                 <button
                   onClick={() => {
@@ -515,7 +515,7 @@ export default function AICompanion() {
 
                     startListening();
                   }}
-                  className={`px-8 py-5 rounded-[30px] text-white font-black text-xl ${
+                  className={`w-full sm:w-auto px-5 sm:px-8 py-3 sm:py-5 rounded-[30px] text-white font-black text-base sm:text-xl ${
                     isListening
                       ? "bg-gradient-to-r from-red-500 to-pink-500 animate-pulse"
                       : "bg-gradient-to-r from-cyan-500 to-blue-600"
@@ -535,7 +535,7 @@ export default function AICompanion() {
 
                     recognitionRef.current?.stop();
                   }}
-                  className="px-8 py-5 rounded-[30px] bg-gradient-to-r from-gray-500 to-gray-700 text-white font-black text-xl"
+                  className="w-full sm:w-auto px-5 sm:px-8 py-3 sm:py-5 rounded-[30px] bg-gradient-to-r from-gray-500 to-gray-700 text-white font-black text-base sm:text-xl"
                 >
                   ⏹ Stop Talking
                 </button>
@@ -544,13 +544,13 @@ export default function AICompanion() {
 
               <VoiceWave active={waveActive} />
 
-              <div className="rounded-[35px] bg-gradient-to-r from-cyan-50 to-blue-50 p-6 text-center mb-5">
+              <div className="rounded-[25px] md:rounded-[35px] bg-gradient-to-r from-cyan-50 to-blue-50 p-4 sm:p-6 text-center mb-5">
 
                 <div className="text-lg font-black text-cyan-700 mb-2">
                   📝 You Said
                 </div>
 
-                <div className="text-2xl font-black text-gray-700">
+                <div className="text-lg sm:text-xl md:text-2xl font-black text-gray-700 break-words">
                   {transcript ||
                     "Waiting for speech..."}
                 </div>
@@ -564,7 +564,7 @@ export default function AICompanion() {
 
                     <div
                       key={index}
-                      className={`max-w-[85%] rounded-[30px] text-white px-6 py-5 shadow-[0_15px_40px_rgba(0,0,0,0.08)] ${
+                      className={`max-w-full sm:max-w-[85%] rounded-[20px] sm:rounded-[30px] text-white px-4 sm:px-6 py-4 sm:py-5 shadow-[0_15px_40px_rgba(0,0,0,0.08)] break-words ${
                         msg.role === "child"
                           ? "ml-auto rounded-br-[10px] bg-gradient-to-r from-pink-500 to-rose-500"
                           : "rounded-bl-[10px] bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"
@@ -580,7 +580,7 @@ export default function AICompanion() {
 
                       </div>
 
-                      <div className="text-lg font-bold leading-relaxed">
+                      <div className="text-sm sm:text-base md:text-lg font-bold leading-relaxed">
                         {msg.text}
                       </div>
 
