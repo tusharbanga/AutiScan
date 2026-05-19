@@ -160,7 +160,7 @@ export default function TherapyDashboard() {
       try {
         setLoading(true);
 
-const response = await fetch("http://127.0.0.1:5002/analyze", {
+const response = await fetch("https://botanical-sneak-jumble.ngrok-free.dev/analyze", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
